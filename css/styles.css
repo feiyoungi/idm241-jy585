@@ -2,7 +2,7 @@
 :root {
     --light-green: #6bc79f;
     --dark-green: #112c20;
-    --light-black: #15171f;
+    --light-black: #1b1e28;
     --dark-black: #07080d;
     --light-orange: #ffcf0a;
     --dark-orange: #fa9d64;
@@ -34,6 +34,15 @@ header a {
     color: var(--light-orange);
 }
 
+/*video*/ 
+video { 
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    max-width: 80%;
+}
+
 /*general body*/
 body {
     background-color: var(--dark-black);
@@ -56,4 +65,17 @@ h3 {
 
 p {
     margin: 15px 0px;
+}
+
+/*media queries*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
