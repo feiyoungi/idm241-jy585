@@ -34,6 +34,14 @@ header a {
     color: var(--light-orange);
 }
 
+/*footer*/
+/*I want to add a link to my portfolio after I update it*/
+footer {
+    background-color: var(--light-black);
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0px 0px 0px;
+}
 /*video*/ 
 video { 
     display: block;
