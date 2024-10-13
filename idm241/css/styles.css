@@ -67,6 +67,24 @@ body {
     border-radius: 15px;
 }
 
+.content-box nav {
+    padding:25px;
+    border: 2px;
+    border-color: var(--light-black);
+    background-color: var(--light-black);
+    margin: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+nav a:visited {
+    color: var(--dark-orange);
+}
+
+nav a {
+    color: var(--light-orange);
+}
+
 h3 {
     color: var(--light-green);
 }
