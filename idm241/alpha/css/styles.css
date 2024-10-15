@@ -46,7 +46,7 @@ nav a {
 /*general body*/
 body {
     background-color: var(--dark-black);
-    color:whitesmoke; /*temporary white bc this is lowkey obnoxious*/
+    color:whitesmoke; 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -82,7 +82,7 @@ p {
 } */
 
 .collapsible.active {
-    border-radius: 30px 30px 0 0; /* Round top corners only when active */
+    border-radius: 30px 30px 0 0; /* round top corners only when active */
 }
 
 .collapsible:hover {
@@ -105,12 +105,12 @@ p {
 }
 
 .content.show {
-    max-height: none; /* Allows content to take its natural height */
-    padding: 20px 10px; /* Add padding when content is visible */
-    border-top: none; /* No top border */
-    border-left: 2px solid var(--light-green);  /* Left border, 2 instead of 2.5 to make it thinner */
-    border-right: 2px solid var(--light-green); /* Right border */
-    border-bottom: 2px solid var(--light-green); /* Bottom border */
+    max-height: none; /* allows content to take its natural height, maybe add scrolling? */
+    padding: 20px 10px;
+    border-top: none; 
+    border-left: 2px solid var(--light-green);  /*2 instead of 2.5 to make it thinner */
+    border-right: 2px solid var(--light-green); 
+    border-bottom: 2px solid var(--light-green); 
 }
 
 .content p {
@@ -186,22 +186,22 @@ button.personality-button {
 
 /*more drop downs*/ 
 .more-drop-downs {
-    display: block; /* Makes sure it does not follow the grid */
-    width: 100%; /* Ensures it takes the full width */
-    margin:0px; /* Adds spacing if needed */
-    color: whitesmoke; /* Matches text color */
-    padding: 10px; /* Optional padding for aesthetics */
+    display: block; /* it still follows the grid */
+    width: 100%;
+    margin:0px; 
+    color: whitesmoke; 
+    padding: 10px; 
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
 }
 
 /*microinteraction*/
 .microinteraction {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    margin: 20px auto; /* Optional: Adds margin around the container */
+    display: flex; 
+    flex-direction: column; /* stack items vertically */
+    justify-content: center; /* center items horizontally */
+    align-items: center; /* center items vertically */
+    margin: 20px auto;
 }
 
 /*footer*/
@@ -238,5 +238,3 @@ footer {
         grid-template-columns: repeat(1, 4fr);
     }
 }
-
-
