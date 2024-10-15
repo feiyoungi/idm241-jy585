@@ -167,7 +167,7 @@ p {
 
 /*personality buttons */
 button.personality-button {
-    padding:13px;
+    padding:13px 10px;
     background-color: var(--gray);
     color: whitesmoke !important;
     border: none;
