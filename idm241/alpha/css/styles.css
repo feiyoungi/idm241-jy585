@@ -116,6 +116,7 @@ p {
 .content p {
     color: whitesmoke;
     margin: 0px;
+    font-size: 14px;
 }
 
 /*context box*/ 
