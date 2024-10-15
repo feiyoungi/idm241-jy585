@@ -1,4 +1,3 @@
-/*still need to add all of the colors*/
 :root {
     --light-green: #6bc79f;
     --dark-green: #112c20;
@@ -35,50 +34,13 @@ header a {
     color: var(--light-orange);
 }
 
-/*footer*/
-/*I want to add a link to my portfolio after I update it*/
-footer {
-    background-color: var(--light-black);
-    text-align: center;
-    padding: 20px;
-    margin: 20px 0px 0px 0px;
-}
-/*video*/ 
-video { 
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
-    max-width: 80%;
+/*links*/
+nav a:visited {
+    color: var(--dark-orange);
 }
 
-/*button*/ 
-.collapsible {
-    background-color: var(--dark-black);
-    color: var(--light-green);
-    cursor: pointer;
-    padding: 18px;
-    width: 252px;
-    border: 2.5px solid var(--dark-green);
-    text-align: center;
-    align-items: center;
-    /* outline: none; */
-    font-size: 15px;
-    border-radius: 30px;
-    margin: 20px 20px 0px 20px;
-}
-
-.active, .collapsible:hover {
-    background-color: var(--dark-black);
-    border: 2.5px solid var(--light-green);
-}
-
-  /* Style the collapsible content. Note: hidden by default */
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
+nav a {
+    color: var(--light-orange);
 }
 
 /*general body*/
@@ -88,6 +50,74 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+h3 {
+    color: var(--light-green);
+}
+
+p {
+    margin: 15px 0px;
+}
+
+/*collapsible*/
+.collapsible {
+    background-color: var(--dark-black);
+    color: var(--light-green);
+    cursor: pointer;
+    padding: 10px 50px;
+    width: 252px;
+    border: 2.5px solid var(--dark-green);
+    text-align: center;
+    align-items: center;
+    outline: none;
+    font-size: 15px;
+    border-radius: 30px;
+    margin: 20px 20px 0px 20px; /*margin: 20px auto 0px auto;*/
+    display: block;
+    transition: border-radius 0.3s ease;
+}
+
+/* .active, .collapsible:hover {
+    background-color: var(--dark-black);
+    border: 2.5px solid var(--light-green);
+} */
+
+.collapsible.active {
+    border-radius: 30px 30px 0 0; /* Round top corners only when active */
+}
+
+.collapsible:hover {
+    background-color: var(--dark-black);
+    border: 2.5px solid var(--light-green);
+}
+
+/*content*/
+.content {
+    max-height: 0; /* to hide the extra info */ 
+    overflow: hidden;
+    background-color: var(--dark-black);
+    border-radius: 0 0 30px 30px; /* rounded bottom corners */
+    width: 252px; /* matches the width of the button */
+    padding: 0 10px; /* adjust padding inside the content */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center; 
+}
+
+.content.show {
+    max-height: none; /* Allows content to take its natural height */
+    padding: 20px 10px; /* Add padding when content is visible */
+    border-top: none; /* No top border */
+    border-left: 2px solid var(--light-green);  /* Left border, 2 instead of 2.5 to make it thinner */
+    border-right: 2px solid var(--light-green); /* Right border */
+    border-bottom: 2px solid var(--light-green); /* Bottom border */
+}
+
+.content p {
+    color: whitesmoke;
+}
+
+/*context box*/ 
 .content-box {
     padding:25px;
     border: 2px;
@@ -107,73 +137,14 @@ body {
     font-size: 25px;
 }
 
-nav a:visited {
-    color: var(--dark-orange);
-}
-
-nav a {
-    color: var(--light-orange);
-}
-
-h3 {
-    color: var(--light-green);
-}
-
-p {
-    margin: 15px 0px;
-}
-
-/*media queries*/
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-@media (max-width: 904px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 2fr);
-    }
-}
-
-@media (max-width: 645px) {
-    .grid-container {
-        grid-template-columns: repeat(1, 4fr);
-    }
-}
-
-.collapsible {
-    background-color: var(--dark-black);
-    color: var(--light-green);
-    cursor: pointer;
-    padding: 10px 50px;
-    width: 252px;
-    text-align: center;
-    outline: none;
-    font-size: 15px;
-    border: 2.5px solid var(--dark-green);
-    border-radius: 30px; 
-    margin: 20px auto 0px auto; 
-    display: block;
-    transition: border-radius 0.3s ease; /* Keep this for smoother transitions */
-}
-
-.collapsible.active {
-    border-radius: 30px 30px 0 0; /* Round top corners only when active */
-}
-
-.collapsible:hover {
-    background-color: var(--dark-black);
-    border: 2.5px solid var(--light-green);
-}
-
+/*personality input*/ 
 .personality-input {
     display: none; /* initially hidden */
     background-color: var(--dark-black);
     color: var(--light-green);
     padding: 10px 20px;
     width: 252px;
-    border: 2.5px solid var(--light-green);  
+    border: 2px solid var(--light-green);  
     border-bottom: none; /* remove the bottom border */
     border-radius: 30px; /* initially fully rounded */
     font-size: 15px;
@@ -190,31 +161,39 @@ p {
     /* background-color: var(--light-black); change background on focus */
 }
 
-.content p {
-    color: whitesmoke;
+/*footer*/
+footer {
+    background-color: var(--light-black);
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0px 0px 0px;
 }
 
-.content {
-    max-height: 0; /* to hide the extra info */ 
-    overflow: hidden;
-    background-color: var(--dark-black);
-    /* Removed transition for no animations */
-    border-radius: 0 0 30px 30px; /* rounded bottom corners */
-    width: 252px; /* matches the width of the button */
-    padding: 0 10px; /* adjust padding inside the content */
+/*video*/ 
+/* video { 
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    max-width: 80%;
+} */
+
+/*media queries*/
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 10px;
-    justify-items: center; 
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.content.show {
-    max-height: none; /* Allows content to take its natural height */
-    padding: 20px 10px; /* Add padding when content is visible */
-    border-top: none; /* No top border */
-    border-left: 2.5px solid var(--light-green);  /* Left border */
-    border-right: 2.5px solid var(--light-green); /* Right border */
-    border-bottom: 2.5px solid var(--light-green); /* Bottom border */
+@media (max-width: 904px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+@media (max-width: 645px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 4fr);
+    }
 }
 
 /* styling for personality buttons */
