@@ -1,43 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
-    var coll = document.getElementsByClassName("collapsible")[0]; // Get the first collapsible button
+    var coll = document.getElementsByClassName("collapsible")[0]; // get the first collapsible button
     var input = document.querySelector(".personality-input");
     var content = document.querySelector(".content");
 
     coll.addEventListener("click", function () {
         this.classList.toggle("active");
 
-        // Hide the button when it is clicked
+        // hide the button when it is clicked
         if (this.style.display !== 'none') {
-            this.style.display = 'none'; // Hide the button
-            input.style.display = 'block'; // Show the input
-            input.classList.add('flat-bottom'); // Add flat bottom style
+            this.style.display = 'none'; // hide the button
+            input.style.display = 'block'; // show the input
+            input.classList.add('flat-bottom'); // add flat bottom style
         }
 
-        // Toggle the collapsible content
+        // toggle the collapsible content
         if (content.style.maxHeight) {
-            content.style.maxHeight = null; // Instantly hide content
+            content.style.maxHeight = null; // instantly hide content
             content.classList.remove("show");
             // Reset button shape
-            this.classList.remove("active"); // Remove active class to reset shape
-            this.style.display = 'block'; // Show the button again
-            input.style.display = 'none'; // Hide the input again
+            this.classList.remove("active"); // remove active class to reset shape
+            this.style.display = 'block'; // show the button again
+            input.style.display = 'none'; // hide the input again
         } else {
-            content.style.maxHeight = "none"; // Instantly show content
+            content.style.maxHeight = "none"; // instantly show content
             content.classList.add("show");
         }
     });
 
-    // Close the collapsible content when clicking outside
+    // close the collapsible content when clicking outside
     document.addEventListener("click", function (event) {
-        // Check if the click was outside the collapsible button and content
+        // check if the click was outside the collapsible button and content
         if (!coll.contains(event.target) && !content.contains(event.target)) {
-            // If content is open, close it
+            // if content is open, close it
             if (content.classList.contains("show")) {
-                content.style.maxHeight = null; // Instantly hide content
+                content.style.maxHeight = null; // instantly hide content
                 content.classList.remove("show");
-                coll.classList.remove("active"); // Reset button shape
-                coll.style.display = 'block'; // Show the button again
-                input.style.display = 'none'; // Hide the input again
+                coll.classList.remove("active"); // reset button shape
+                coll.style.display = 'block'; // show the button again
+                input.style.display = 'none'; // hide the input again
             }
         }
     });
