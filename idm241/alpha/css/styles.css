@@ -115,6 +115,7 @@ p {
 
 .content p {
     color: whitesmoke;
+    margin: 0px;
 }
 
 /*context box*/ 
@@ -142,7 +143,7 @@ p {
     display: none; /* initially hidden */
     background-color: var(--dark-black);
     color: var(--light-green);
-    padding: 10px 20px;
+    padding: 10px 20px 0px 20px;
     width: 252px;
     border: 2px solid var(--light-green);  
     border-bottom: none; /* remove the bottom border */
