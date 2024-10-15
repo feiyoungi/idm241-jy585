@@ -145,6 +145,7 @@ p {
     background-color: var(--dark-black);
     color: var(--light-green);
     padding: 10px 20px 5px 20px;
+    margin-top: 20px;
     width: 252px;
     border: 2px solid var(--light-green);  
     border-bottom-color: var(--gray); /* border bottom none to  remove the bottom border */
