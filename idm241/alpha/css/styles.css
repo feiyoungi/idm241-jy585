@@ -63,7 +63,7 @@ p {
     background-color: var(--dark-black);
     color: var(--light-green);
     cursor: pointer;
-    padding: 10px 50px;
+    padding: 10px 49px;
     width: 252px;
     border: 2.5px solid var(--dark-green);
     text-align: center;
@@ -90,6 +90,25 @@ p {
     border: 2.5px solid var(--light-green);
 }
 
+/*caret and chevron*/
+.wide-caret::before {
+    content: "^"; 
+    display: inline-block;
+    font-size: 15px; 
+    transform: scaleX(1.7); 
+    margin-left: 5px; 
+    font-weight: lighter;
+}
+
+.wide-chevron::before {
+    content: "^"; 
+    display: inline-block;
+    font-size: 15px; 
+    transform: scaleX(1.7) rotate(180deg); 
+    margin-left: 10px; 
+    font-weight: lighter;
+}
+
 /*content*/
 .content {
     max-height: 0; /* to hide the extra info */ 
@@ -100,8 +119,9 @@ p {
     padding: 0 10px; /* adjust padding inside the content */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 10px 0px;
     justify-items: center; 
+    /* transition: max-height 0.3s ease, padding 0.3s ease; */
 }
 
 .content.show {
