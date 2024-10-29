@@ -51,6 +51,19 @@ video {
     max-width: 80%;
 }
 
+/*mock ups*/ 
+.mock-ups img {
+    max-width: 100%; 
+    height: auto;
+    margin: 10px;
+}
+
+.mock-ups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /*general body*/
 body {
     background-color: var(--dark-black);
