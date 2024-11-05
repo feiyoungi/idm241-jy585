@@ -6,6 +6,8 @@
     <title>IDM241 Beta Build</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
 <body>
@@ -48,7 +50,23 @@
     </div>
 
     <div class="microinteraction2">
-
+        <div class="button-container">
+            <div class="button-cell">
+                <div class="like-section" onclick="toggleSelection('like')">
+                    <span id="like-count">0</span>
+                    <span class="material-icons">thumb_up_off_alt</span>
+                </div>
+                <div class="separator"></div>
+                <div class="dislike-section" onclick="toggleSelection('dislike')">
+                    <div class="icons">
+                        <span class="material-icons">thumb_down_off_alt</span>    
+                    </div>
+                    <div class="dislike-number">
+                        <span id="dislike-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
 </div>
@@ -154,10 +172,12 @@
                         <li>Hover ON</li>
                             <ul>
                                 <li>Cursor changes to finger</li>
+                                <li>Color of button outline changes to green and fades in at 0.3s for unselected button</li>
                             </ul>
                         <li>Hover OFF</li>
                             <ul>
                                 <li>Cursor changes to pointer</li>
+                                <li>Color of button outline changes back to gray and fades in at 0.3s for unselected button</li>
                             </ul>
                         <li>Click ON</li>
                             <ul>
@@ -235,10 +255,12 @@
                 <li>Hover ON</li>
                     <ul>
                         <li>Cursor changes to finger</li>
+                        <li>Color of button outline changes to green and fades in at 0.3s for unselected button</li>
                     </ul>
                 <li>Hover OFF</li>
                     <ul>
                         <li>Cursor changes to pointer</li>
+                        <li>Color of button outline changes back to gray and fades in at 0.3s for unselected button</li>
                     </ul>
                 <li>Click ON</li>
                     <ul>

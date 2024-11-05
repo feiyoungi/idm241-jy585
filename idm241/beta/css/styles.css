@@ -3,7 +3,9 @@
     --dark-green: #112c20;
     --light-black: #1b1e28;
     --dark-black: #07080d;
-    --gray: #262626; 
+    --gray: #262626;
+    --border-gray: #434343;  
+    --inside-border-gray: #15171F; 
     --light-orange: #ffcf0a;
     --dark-orange: #fa9d64;
 }
@@ -231,6 +233,56 @@ button.personality-button {
 }
 
 /*like and dislike button*/ 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-cell {
+    display: flex;
+    border: 2.5px solid var(--border-gray);
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: var(--inside-border-gray);
+}
+
+.like-section, .dislike-section {
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.like-section:active, .dislike-section:active {
+    transform: scale(1.2);
+}
+
+.material-icons { 
+    padding: 0px 5px;
+    color: #8C8C8C;
+    transition: color 0.3s ease;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dislike-section .material-icons:hover,
+.like-section .material-icons:hover {
+    color: var(--light-green);
+}
+
+.like-section.active .material-icons,
+.dislike-section.active .material-icons {
+    color: var(--light-green);
+}
+
+#like-count, #dislike-count {
+    color: #8C8C8C; 
+}
+
 
 /*footer*/
 footer {
