@@ -74,6 +74,7 @@ p {
     margin: 20px 20px 0px 20px; /*margin: 20px auto 0px auto;*/
     display: block;
     transition: border-radius 0.3s ease;
+    transition: transform 0.3s ease; 
 }
 
 /* .active, .collapsible:hover {
@@ -88,6 +89,7 @@ p {
 .collapsible:hover {
     background-color: var(--dark-black);
     border: 2.5px solid var(--light-green);
+    transform: scale(1.05); /* Adjust scale to control hover size */
 }
 
 /*caret and chevron*/
@@ -121,7 +123,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 0px;
     justify-items: center; 
-    /* transition: max-height 0.3s ease, padding 0.3s ease; */
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Add transition */
 }
 
 .content.show {
@@ -137,6 +139,10 @@ p {
     color: whitesmoke;
     margin: 0px;
     font-size: 14px;
+}
+
+.content p:hover {
+    color: var(--light-green);
 }
 
 /*context box*/ 
@@ -223,6 +229,8 @@ button.personality-button {
     align-items: center; /* center items vertically */
     margin: 20px auto;
 }
+
+/*like and dislike button*/ 
 
 /*footer*/
 footer {
