@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM241 Final Description</title>
+    <link href="css/final.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img src="assets/logo.png" alt="personality database logo">
+            <h1>IDM241 Final Description</h1>
+            <h2>Microinteractions: 'Select Personalities' Dropdown Button, 'Like/Dislike' Button for <a href="https://www.personality-database.com/en-US/profile/8817/kou-mabuchi-ao-haru-ride-mbti-personality-type" target="_blank">Personality Database</a></h2>
+        </div>
+    </header>
+
+<div class="grid-container">
+    <div class="content-box">
+        <h3>TRIGGERS</h3>
+            <p><strong>Select Personalities - Default</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                </ul>
+            <p><strong>Select Personalities - Active</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                        <ul>
+                            <li>Space Inside of the Dropdown</li>
+                            <li>Space Outside of the Dropdown</li>
+                        </ul>
+                </ul>
+            <p><strong>Like/Dislike Button - Default</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                </ul>
+            <p><strong>Like/Dislike Button - Active</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>RULES</h3>
+            <p><strong>Select Personalities - Default</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                        <ul>
+                            <li>Cursor changes to finger</li>
+                            <li>Opacity of button outline fades in and increases by 50% at 0.3s</li>
+                            <li>Button scales 5% larger at 0.3s</li>
+                        </ul>
+                    <li>Hover OFF</li>
+                        <ul>
+                            <li>Cursor changes to pointer</li>
+                            <li>Opacity of button outline fades out and decreases by 50% at 0.3s</li>
+                            <li>Button scales 5% smaller at 0.3s</li>
+                        </ul>
+                    <li>Click ON</li>
+                        <ul>
+                            <li>Dropdown opens down and transforms/eases by 0.3s </li>
+                            <li>Thickness of button outline decreases by 50% by 0.3s</li>
+                        </ul>
+                </ul>
+            <p><strong>Select Personalities - Active</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                        <ul>
+                            <li>Cursor changes to finger or I-beam; depends on where within the pop-up the cursor lands</li>
+                        </ul>
+                    <li>Hover OFF</li>
+                        <ul>
+                            <li>Cursor changes to pointer</li>
+                        </ul>
+                    <li>Click ON (Space Inside of the Dropdown)</li>
+                        <ul>
+                            <li>NONE; nothing occurs if the click does not touch the other components</li>
+                        </ul>
+                    <li>Click ON (Space Outside of the Dropdown)</li>
+                        <ul>
+                            <li>Dropdown closes up and transforms/eases by 0.3s</li>
+                            <li>Thickness of button outline increases by 50% at 0.3s</li>
+                            <li>Opacity of button ouline fades out and decreases by 50% at 0.3s</li>
+                        </ul>
+                </ul>
+            <p><strong>Like/Dislike Button - Default</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                        <ul>
+                            <li>Cursor changes to finger</li>
+                            <li>Color of button outline changes to green and fades in at 0.3s</li>
+                        </ul>
+                    <li>Hover OFF</li>
+                        <ul>
+                            <li>Cursor changes to pointer</li>
+                            <li>Color of button outline changes back to gray and fades in at 0.3s</li>
+                        </ul>
+                    <li>Click ON</li>
+                        <ul>
+                            <li>Like/dislike icon fills in with green, scales 5% larger, then 5% smaller at 0.3s </li>
+                            <li>Number of likes/dislikes changes to 1 value more</li>
+                            <li>Database sets like/dislike number to increase by n+1</li>
+                            <li>Database sets like/dislike to “true”, the unselected one of the pair will be set to “false”</li>
+                        </ul>
+                </ul>
+            <p><strong>Like/Dislike Button - Active</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                        <ul>
+                            <li>Cursor changes to finger</li>
+                        </ul>
+                    <li>Hover OFF</li>
+                        <ul>
+                            <li>Cursor changes to pointer</li>
+                        </ul>
+                    <li>Click ON</li>
+                        <ul>
+                            <li>Like/dislike icon scales 5% larger, then 5% smaller, green color fades away, and gray outline fades in and returns at 0.3s</li>
+                            <li>Number of likes/dislikes changes to 1 value less</li>
+                            <li>Database sets like/dislike number to decrease by n-1</li>
+                            <li>Database sets like/dislike to “false”</li>
+                        </ul>
+                </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>FEEDBACK</h3>
+        <p><strong>Select Personalities - Default</strong></p>
+        <ul>
+            <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                    <li>Opacity of button outline fades in and increases by 50% at 0.3s</li>
+                    <li>Button scales 5% larger at 0.3s</li>
+                </ul>
+            <li>Hover OFF</li>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                    <li>Opacity of button outline fades out and decreases by 50% at 0.3s</li>
+                    <li>Button scales 5% smaller at 0.3s</li>
+                </ul>
+            <li>Click ON</li>
+                <ul>
+                    <li>Dropdown opens down and transforms/eases by 0.3s </li>
+                    <li>Thickness of button outline decreases by 50% by 0.3s</li>
+                </ul>
+        </ul>
+    <p><strong>Select Personalities - Active</strong></p>
+        <ul>
+            <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger or I-beam; depends on where within the pop-up the cursor lands</li>
+                </ul>
+            <li>Hover OFF</li>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                </ul>
+            <li>Click ON (Space Inside of the Dropdown)</li>
+                <ul>
+                    <li>NONE; nothing occurs if the click does not touch the other components</li>
+                </ul>
+            <li>Click ON (Space Outside of the Dropdown)</li>
+                <ul>
+                    <li>Dropdown closes up and transforms/eases by 0.3s</li>
+                    <li>Thickness of button outline increases by 50% at 0.3s</li>
+                    <li>Opacity of button ouline fades out and decreases by 50% at 0.3s</li>
+                </ul>
+        </ul>
+    <p><strong>Like/Dislike Button - Default</strong></p>
+        <ul>
+            <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                    <li>Color of button outline changes to green and fades in at 0.3s</li>
+                </ul>
+            <li>Hover OFF</li>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                    <li>Color of button outline changes back to gray and fades in at 0.3s</li>
+                </ul>
+            <li>Click ON</li>
+                <ul>
+                    <li>Like/dislike icon fills in with green, scales 5% larger, then 5% smaller at 0.3s </li>
+                    <li>Number of likes/dislikes changes to 1 value more</li>
+                </ul>
+        </ul>
+    <p><strong>Like/Dislike Button - Active</strong></p>
+        <ul>
+            <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                </ul>
+            <li>Hover OFF</li>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                </ul>
+            <li>Click ON</li>
+                <ul>
+                    <li>Like/dislike icon scales 5% larger, then 5% smaller, green color fades away, and gray outline fades in and returns at 0.3s</li>
+                    <li>Number of likes/dislikes changes to 1 value less</li>
+                </ul>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>LOOPS &amp; MODES</h3>
+            <p><strong>Loops</strong></p>
+                <ul>
+                    <li>NONE</li>
+                </ul>
+            <p><strong>Modes</strong></p>
+                <ul>
+                    <li>Dropdown that opens down when you click on Select Personalities</li>
+                </ul>
+    </div>
+</div>
+
+<div class="mockups-select">
+    <div class="mock-ups">
+        <img src="assets/select-default-min.jpg" alt="mockup for select personalities button">
+    </div>
+    
+    <div class="mock-ups">
+        <img src="assets/select-active-min.jpg" alt="mockup for select personalities button">
+    </div>
+</div>
+
+<div class="mock-ups">
+    <img src="assets/like-dislike-min.jpg" alt="mockup for like/dislike button">
+</div>
+
+<footer>
+    <h3>Fei Young 2024</h3>
+</footer>
+</body>
+
+</html>

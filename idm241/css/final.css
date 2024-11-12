@@ -1,0 +1,126 @@
+/*still need to add all of the colors*/
+:root {
+    --light-green: #6bc79f;
+    --dark-green: #112c20;
+    --light-black: #1b1e28;
+    --dark-black: #07080d;
+    --light-orange: #ffcf0a;
+    --dark-orange: #fa9d64;
+}
+
+/*global reset*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*header*/
+.header {
+    background-color: #232327;
+    text-align: center;
+    padding: 25px;
+}
+
+header img {
+    width: 90px;
+
+}
+
+header a:visited {
+    color: var(--dark-orange);
+}
+
+header a {
+    color: var(--light-orange);
+}
+
+/*footer*/
+/*I want to add a link to my portfolio after I update it*/
+footer {
+    background-color: var(--light-black);
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0px 0px 0px;
+}
+/*video*/ 
+video { 
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    max-width: 80%;
+}
+
+/*mock ups*/ 
+.mock-ups img {
+    max-width: 100%; 
+    height: auto;
+    margin: 10px;
+}
+
+.mock-ups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*general body*/
+body {
+    background-color: var(--dark-black);
+    color:whitesmoke; /*temporary white bc this is lowkey obnoxious*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content-box {
+    padding:25px;
+    border: 2px;
+    border-color: var(--light-black);
+    background-color: var(--light-black);
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.content-box nav {
+    padding:25px;
+    border: 2px;
+    border-color: var(--light-black);
+    background-color: var(--light-black);
+    margin: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+nav a:visited {
+    color: var(--dark-orange);
+}
+
+nav a {
+    color: var(--light-orange);
+}
+
+h3 {
+    color: var(--light-green);
+}
+
+p {
+    margin: 15px 0px;
+}
+
+/*media queries*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+@media (max-width: 904px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+@media (max-width: 645px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 4fr);
+    }
+}
