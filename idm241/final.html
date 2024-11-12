@@ -12,7 +12,7 @@
         <div class="header">
             <img src="assets/logo.png" alt="personality database logo">
             <h1>IDM241 Final Description</h1>
-            <h2>Microinteractions: 'Select Personalities' Dropdown Button, 'Like/Dislike' Button for <a href="https://www.personality-database.com/en-US/profile/8817/kou-mabuchi-ao-haru-ride-mbti-personality-type" target="_blank">Personality Database</a></h2>
+            <h2>Microinteractions: 'Select Personalities' Dropdown Button, 'Like' Button, 'Dislike' Button, 'More' Button, and 'New' Button for <a href="https://www.personality-database.com/en-US/profile/8817/kou-mabuchi-ao-haru-ride-mbti-personality-type" target="_blank">Personality Database</a></h2>
         </div>
     </header>
 
@@ -46,6 +46,32 @@
                     <li>Hover ON</li>
                     <li>Hover OFF</li>
                     <li>Click ON</li>
+                </ul>
+            <p><strong>More Button - Default</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                </ul>
+            <p><strong>More Button - Active</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                        <ul>
+                            <li>Space Outside of More Button</li>
+                        </ul>
+                </ul>
+            <p><strong>New Button - Default/Active</strong></p>
+                <p><em>The default and active states are the same.</em></p>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                        <ul>
+                            <li>Space Inside of New Button</li>
+                            <li>More Button</li>
+                        </ul>
                 </ul>
     </div>
 
@@ -130,6 +156,63 @@
                             <li>Database sets like/dislike to “false”</li>
                         </ul>
                 </ul>
+            <p><strong>More Button - Default</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                        <ul>
+                            <li>Cursor changes to finger</li>
+                            <li>Button color fades into a green with 30% opacity at 0.3s</li>
+                        </ul>
+                    <li>Hover OFF</li>
+                        <ul>
+                            <li>Finger changes to cursor</li>
+                            <li>Button color fades back into a gray at 0.3s</li>
+                        </ul>
+                    <li>Click ON</li>
+                        <ul>
+                            <li>Button color fades into a green with 100% opacity at 0.3s</li>
+                            <li>Text color changes from gray to white at 0.3s</li>
+                            <li>Dropdown opens down and transforms/eases at 0.3s</li>
+                        </ul>
+                </ul>
+            <p><strong>More Button - Active</strong></p>
+                <ul>
+                    <li>Hover ON</li>
+                        <ul>
+                            <li>Cursor changes to finger</li>
+                        </ul>
+                    <li>Hover OFF</li>
+                        <ul>
+                            <li>Finger changes to cursor</li>
+                        </ul>
+                    <li>Click ON (Space Outside of More Button)</li>
+                        <ul>
+                            <li>Button color fades back into a gray at 0.3s</li>
+                            <li>Text color changes from white to gray at 0.3s</li>
+                            <li>Dropdown closes up and transforms/eases at 0.3s</li>
+                        </ul>
+                </ul>
+            <p><strong>New Button - Default/Active</strong></p>
+                <p><em>The default and active states are the same.</em></p>
+                <ul>
+                    <li>Hover ON</li>
+                        <ul>
+                            <li>Cursor changes to finger</li>
+                        </ul>
+                    <li>Hover OFF</li>
+                        <ul>
+                            <li>Finger changes to cursor</li>
+                        </ul>
+                    <li>Click ON (Space Inside of New Button)</li>
+                        <ul>
+                            <li>NONE; nothing occurs as its active state is also its default state</li>
+                        </ul>
+                    <li>Click ON (More Button)</li>
+                        <ul>
+                            <li>Button color fades back into a gray at 0.3s</li>
+                            <li>Text color changes from white to gray at 0.3s</li>
+                        </ul>
+                </ul>
     </div>
 
     <div class="content-box">
@@ -209,6 +292,63 @@
                     <li>Number of likes/dislikes changes to 1 value less</li>
                 </ul>
         </ul>
+    <p><strong>More Button - Default</strong></p>
+        <ul>
+            <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                    <li>Button color fades into a green with 30% opacity at 0.3s</li>
+                </ul>
+            <li>Hover OFF</li>
+                <ul>
+                    <li>Finger changes to cursor</li>
+                    <li>Button color fades back into a gray at 0.3s</li>
+                </ul>
+            <li>Click ON</li>
+                <ul>
+                    <li>Button color fades into a green with 100% opacity at 0.3s</li>
+                    <li>Text color changes from gray to white at 0.3s</li>
+                    <li>Dropdown opens down and transforms/eases at 0.3s</li>
+                </ul>
+        </ul>
+    <p><strong>More Button - Active</strong></p>
+        <ul>
+            <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                </ul>
+            <li>Hover OFF</li>
+                <ul>
+                    <li>Finger changes to cursor</li>
+                </ul>
+            <li>Click ON (Space Outside of More Button)</li>
+                <ul>
+                    <li>Button color fades back into a gray at 0.3s</li>
+                    <li>Text color changes from white to gray at 0.3s</li>
+                    <li>Dropdown closes up and transforms/eases at 0.3s</li>
+                </ul>
+        </ul>
+    <p><strong>New Button - Default/Active</strong></p>
+        <p><em>The default and active states are the same.</em></p>
+        <ul>
+            <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                </ul>
+            <li>Hover OFF</li>
+                <ul>
+                    <li>Finger changes to cursor</li>
+                </ul>
+            <li>Click ON (Space Inside of New Button)</li>
+                <ul>
+                    <li>NONE; nothing occurs as its active state is also its default state</li>
+                </ul>
+            <li>Click ON (More Button)</li>
+                <ul>
+                    <li>Button color fades back into a gray at 0.3s</li>
+                    <li>Text color changes from white to gray at 0.3s</li>
+                </ul>
+        </ul>
     </div>
 
     <div class="content-box">
@@ -220,6 +360,7 @@
             <p><strong>Modes</strong></p>
                 <ul>
                     <li>Dropdown that opens down when you click on Select Personalities</li>
+                    <li>Dropdown that opens down when you click on More</li>
                 </ul>
     </div>
 </div>
