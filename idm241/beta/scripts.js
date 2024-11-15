@@ -138,24 +138,6 @@ function toggleSelection(type) {
     updateStyles();
 }
 
-// function updateStyles() {
-//     const likeIcon = document.querySelector('.like-section .material-icons');
-//     const dislikeIcon = document.querySelector('.dislike-section .material-icons');
-
-//     // Update icons based on selection
-//     if (selected === 'like') {
-//         likeIcon.textContent = 'thumb_up'; // Change to filled icon
-//     } else {
-//         likeIcon.textContent = 'thumb_up_off_alt'; // Change back to outlined icon
-//     }
-
-//     if (selected === 'dislike') {
-//         dislikeIcon.textContent = 'thumb_down'; // Change to filled icon
-//     } else {
-//         dislikeIcon.textContent = 'thumb_down_off_alt'; // Change back to outlined icon
-//     }
-// }
-
 function updateStyles() {
     const likeIcon = document.querySelector('.like-section .material-icons');
     const dislikeIcon = document.querySelector('.dislike-section .material-icons');
@@ -163,25 +145,13 @@ function updateStyles() {
     // Update icons based on selection
     if (selected === 'like') {
         likeIcon.textContent = 'thumb_up'; // Change to filled icon
-        likeIcon.style.opacity = 1; // Set opacity to 1 (fully visible)
-        likeIcon.style.color = 'var(--light-green)'; // Green color on selection
     } else {
         likeIcon.textContent = 'thumb_up_off_alt'; // Change back to outlined icon
-        likeIcon.style.opacity = 0.5; // Set opacity to 0.5 when not selected (fade out)
-        likeIcon.style.color = '#8C8C8C'; // Reset color to default
     }
 
     if (selected === 'dislike') {
         dislikeIcon.textContent = 'thumb_down'; // Change to filled icon
-        dislikeIcon.style.opacity = 1; // Set opacity to 1 (fully visible)
-        dislikeIcon.style.color = 'var(--light-green)'; // Green color on selection
     } else {
         dislikeIcon.textContent = 'thumb_down_off_alt'; // Change back to outlined icon
-        dislikeIcon.style.opacity = 0.5; // Set opacity to 0.5 when not selected (fade out)
-        dislikeIcon.style.color = '#8C8C8C'; // Reset color to default
     }
 }
-
-
-
-
