@@ -264,7 +264,7 @@ button.personality-button {
 .material-icons { 
     padding: 0px 5px;
     color: #8C8C8C;
-    transition: color 0.6s ease;
+    transition: color 0.6s ease, opacity 0.6s ease; /* Add opacity transition */
     font-size: 24px;
     cursor: pointer;
 }
