@@ -75,8 +75,8 @@ p {
     border-radius: 30px;
     margin: 20px 20px 0px 20px; /*margin: 20px auto 0px auto;*/
     display: block;
-    transition: border-radius 0.3s ease;
-    transition: transform 0.3s ease; 
+    transition: border-radius 3s ease;
+    transition: transform 0.6s ease; 
 }
 
 /* .active, .collapsible:hover {
@@ -125,7 +125,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 0px;
     justify-items: center; 
-    transition: max-height 0.3s ease, padding 0.3s ease; /* Add transition */
+    transition: max-height 0.6s ease, padding 0.6s ease; /* Add transition */
 }
 
 .content.show {
@@ -250,7 +250,7 @@ button.personality-button {
 .like-section, .dislike-section {
     padding: 10px 20px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.6s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,7 +264,7 @@ button.personality-button {
 .material-icons { 
     padding: 0px 5px;
     color: #8C8C8C;
-    transition: color 0.3s ease;
+    transition: color 0.6s ease;
     font-size: 24px;
     cursor: pointer;
 }
@@ -277,6 +277,7 @@ button.personality-button {
 .like-section.active .material-icons,
 .dislike-section.active .material-icons {
     color: var(--light-green);
+    /* opacity: 1; */
 }
 
 #like-count, #dislike-count {
