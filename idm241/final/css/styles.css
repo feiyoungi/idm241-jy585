@@ -1,6 +1,7 @@
 :root {
     --light-green: #6bc79f;
     --dark-green: #112c20;
+    --hover-green: #1E3030; 
     --light-black: #1b1e28;
     --dark-black: #07080d;
     --gray: #262626;
@@ -79,7 +80,7 @@ p {
     font-size: 15px;
     border-radius: 30px;
     /* margin: 20px 20px 0px 0px;  */
-    margin: 20px auto 0px auto;
+    margin: 20px 20px;
     display: block;
     transition: border-radius 3s ease;
     transition: transform 0.6s ease; 
@@ -317,7 +318,6 @@ footer {
 /* Sidebar */
 .sidebar {
     width: 30%;
-    padding: 0px 0px 20px 20px;
 }
 
 /* Sidebar Extra Buttons */ 
@@ -344,37 +344,108 @@ footer {
 .filters {
     display: flex;
     margin-bottom: 20px;
+    background-color: var(--light-black);
+    border-radius: 30px;
 }
 
 .filter-btn {
-    background-color: #292929;
+    background-color: var(--light-black);
     border: none;
-    color: whitesmoke;
+    color: #959595;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.filter-btn:first-child {
-    border-radius: 30px 0 0 30px; /* Rounded top-left and bottom-left */
-}
-
-.filter-btn:last-child {
-    border-radius: 0 30px 30px 0; /* Rounded top-right and bottom-right */
+    border-radius: 30px;
+    transition: background-color 0.6s ease, box-shadow 0.6s ease;
+    width: 252px;
+    font-size: 15px;
 }
 
 .filter-btn:hover {
-    background-color: var(--light-green);
-    border-radius: 30px
-    box-shadow: 0 0 8px 2px rgba(72, 175, 83, 0.6);
+    background-color: var(--hover-green);
+    color: whitesmoke;
 }
 
-.filter-btn:active {
-    background-color: #4caf50; /* Slightly brighter green for active state */
+.filter-btn.selected {
+    background-color: #225941; /* Same green as hover state */
+    color: whitesmoke;
+}
+
+/* Dropdown specific styles */
+.filter-dropdown {
+    position: relative;
+}
+
+.filter-btn.more-btn {
+    border-radius: 30px; /* Default rounded corners */
+    transition: border-radius 0.3s ease; /* Smooth transition */
+}
+
+.filter-btn.more-btn.active {
+    border-radius: 30px 30px 0 0; /* Only top corners rounded */
+}
+
+.filter-btn2 {
+    background-color: #225941;
+    border: none;
+    color: #959595;
+    padding: 10px 20px;
+    width: 252px;
+    font-size: 15px;
+}
+
+.filter-btn3 {
+    background-color: #225941;
+    border: none;
+    color: #959595;
+    padding: 10px 20px;
+    width: 252px;
+    font-size: 15px;
+}
+
+.filter-btn4 {
+    background-color: #225941;
+    border: none;
+    color: #959595;
+    padding: 10px 20px;
+    width: 252px;
+    font-size: 15px;
+    border-radius: 0 0 30px 30px; /* Bottom-left and bottom-right corners rounded */
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position dropdown below the button */
+    left: 0;
+    background-color: var(--light-black);
+    /* border-radius: 30px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden;
+    width: 100%; /* Match the parent button width */
+    border: none;
+}
+
+.dropdown-content .filter-btn {
+    padding: 10px 20px;
+    width: 100%; /* Full width */
+    border-radius: 0; /* No rounded corners inside */
+}
+
+.dropdown-content .filter-btn:first-child {
+    border-radius: 30px 30px 0 0; /* Round top corners */
+}
+
+.dropdown-content .filter-btn:last-child {
+    border-radius: 0 0 30px 30px; /* Round bottom corners */
+}
+
+.filter-dropdown .dropdown-content.show {
+    display: block; /* Show dropdown when active */
 }
 
 .post {
-    background-color: #1e1e1e;
+    background-color: var(--light-black);
     padding: 20px;
     border-radius: 8px;
 }
@@ -395,6 +466,7 @@ footer {
 .profile-info h3 {
     margin: 0;
     font-size: 18px;
+    color: whitesmoke;
 }
 
 .profile-info p {
@@ -404,15 +476,25 @@ footer {
 }
 
 .badge {
-    color: var(--border-gray);
+    color: #ccc;
     padding: 5px 10px;
     border-radius: 5px;
     margin-left: auto;
 }
 
+.badge2 {
+    color: whitesmoke;
+    background-color: var(--light-green);
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-left: auto;
+}
+
+
 .post-text {
     margin-bottom: 15px;
     line-height: 1.6;
+    color: whitesmoke;
 }
 
 .post-footer {
