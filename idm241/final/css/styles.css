@@ -80,7 +80,7 @@ p {
     font-size: 15px;
     border-radius: 30px;
     /* margin: 20px 20px 0px 0px;  */
-    margin: 20px 20px;
+    margin: 20px 0px;
     display: block;
     transition: border-radius 3s ease;
     transition: transform 0.6s ease; 
@@ -236,7 +236,7 @@ button.personality-button {
     flex-direction: column; /* stack items vertically */
     justify-content: center; /* center items horizontally */
     align-items: center; /* center items vertically */
-    margin: 0px auto 10px auto;
+    /* margin: 0px auto 10px auto; */
 }
 
 /*like and dislike button*/ 
@@ -317,7 +317,7 @@ footer {
 
 /* Sidebar */
 .sidebar {
-    width: 30%;
+    width: 25%;
 }
 
 /* Sidebar Extra Buttons */ 
@@ -337,7 +337,7 @@ footer {
 }
 /* Content */
 .post-content {
-    width: 70%;
+    width: 75%;
     padding: 20px;
 }
 
@@ -368,6 +368,14 @@ footer {
 .filter-btn.selected {
     background-color: #225941; /* Same green as hover state */
     color: whitesmoke;
+}
+
+/* Disable hover effects for Best and Top buttons */
+.filter-btn.no-hover:hover {
+    background-color: var(--light-black); /* Keep the default background color */
+    color: #959595; /* Keep the default text color */
+    transform: none; /* Prevent any scaling */
+    box-shadow: none; /* Remove any shadow effects */
 }
 
 /* Dropdown specific styles */
