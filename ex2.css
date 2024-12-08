@@ -1,7 +1,6 @@
 :root {
     --light-green: #6bc79f;
     --dark-green: #112c20;
-    --hover-green: #1E3030; 
     --light-black: #1b1e28;
     --dark-black: #07080d;
     --gray: #262626;
@@ -72,18 +71,14 @@ p {
     color: var(--light-green);
     cursor: pointer;
     padding: 10px 49px;
-    /* width: 252px; change */
-    width: 100%; /* change */
-    max-width: 252px;/* change */
+    width: 252px;
     border: 2.5px solid var(--dark-green);
     text-align: center;
     align-items: center;
     outline: none;
     font-size: 15px;
     border-radius: 30px;
-    /* margin: 20px 20px 0px 0px;  */
-    /* margin: 20px 0px; */
-    margin: 20px;
+    margin: 20px 20px 0px 20px; /*margin: 20px auto 0px auto;*/
     display: block;
     transition: border-radius 3s ease;
     transition: transform 0.6s ease; 
@@ -125,9 +120,6 @@ p {
 
 /*content*/
 .content {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
     max-height: 0; /* to hide the extra info */ 
     overflow: hidden;
     background-color: var(--dark-black);
@@ -187,8 +179,6 @@ p {
     color: var(--light-green);
     padding: 10px 20px 5px 20px;
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
     width: 252px;
     border: 2px solid var(--light-green);  
     border-bottom-color: var(--gray); /* border bottom none to  remove the bottom border */
@@ -244,7 +234,7 @@ button.personality-button {
     flex-direction: column; /* stack items vertically */
     justify-content: center; /* center items horizontally */
     align-items: center; /* center items vertically */
-    /* margin: 0px auto 10px auto; */
+    margin: 20px auto;
 }
 
 /*like and dislike button*/ 
@@ -317,222 +307,135 @@ footer {
     max-width: 80%;
 } */
 
-/*Final Build*/ 
 .container {
     display: flex;
     height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 20%; /* change, used to be 25% */
-}
-
-/* Sidebar Extra Buttons */ 
-.extra-buttons {
-    background-color: var(--dark-black);
-    color: var(--light-green);
-    padding: 10px 49px;
-    width: 252px;
-    border: 2.5px solid var(--dark-green);
-    text-align: center;
-    align-items: center;
-    font-size: 15px;
-    border-radius: 30px;
-    /* margin: 10px 20px; */
-    /* margin: 20px 20px 0px 0px;  */
-    margin: 20px auto 0px auto;
-}
-/* Content */
-.post-content {
-    width: 80%;/*change, used to be 75% */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 20%;
+    background-color: #1e1e1e;
     padding: 20px;
-}
-
-.filters {
-    display: flex;
-    margin-bottom: 20px;
-    background-color: var(--light-black);
-    border-radius: 30px;
-}
-
-.filter-btn {
-    background-color: var(--light-black);
+  }
+  
+  .sidebar button {
+    background-color: #292929;
     border: none;
-    color: #959595;
+    color: #90ee90;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: #90ee90;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Content */
+  .post-content {
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-btn {
+    background-color: #292929;
+    border: none;
+    color: #90ee90;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 30px;
-    transition: background-color 0.6s ease, box-shadow 0.6s ease;
-    width: 125px;
-    font-size: 15px;
-}
-
-.filter-btn:hover {
-    background-color: var(--hover-green);
-    color: whitesmoke;
-}
-
-.filter-btn.selected {
-    background-color: #225941; /* Same green as hover state */
-    color: whitesmoke;
-}
-
-/* Disable hover and click functionality for Best and Top buttons */
-.filter-btn.no-hover {
-    background-color: var(--light-black); /* Default background */
-    color: #959595; /* Default text color */
-    cursor: default; /* Change cursor to indicate it's not clickable */
-    transform: none; /* Prevent any scaling on hover */
-    box-shadow: none; /* Remove shadow effects */
-    padding: 10px 20px;
-}
-
-/* Remove active state for these buttons as well */
-.filter-btn.no-hover:active {
-    background-color: var(--light-black); /* Maintain default background */
-    color: #959595; /* Keep the default text color */
-}
-
-/* Dropdown specific styles */
-.filter-dropdown {
-    position: relative;
-}
-
-.filter-btn.more-btn {
-    border-radius: 30px; /* Default rounded corners */
-    transition: border-radius 0.3s ease; /* Smooth transition */
-    width: 125px;
-}
-
-.filter-btn.more-btn.active {
-    border-radius: 30px 30px 0 0; /* Only top corners rounded */
-}
-
-.filter-btn2 {
-    background-color: #225941;
-    border: none;
-    color: #959595;
-    padding: 10px 20px;
-    width: 125px;
-    font-size: 15px;
-}
-
-.filter-btn3 {
-    background-color: #225941;
-    border: none;
-    color: #959595;
-    padding: 10px 20px;
-    width: 125px;
-    font-size: 15px;
-}
-
-.filter-btn4 {
-    background-color: #225941;
-    border: none;
-    color: #959595;
-    padding: 10px 20px;
-    width: 125px;
-    font-size: 15px;
-    border-radius: 0 0 30px 30px; /* Bottom-left and bottom-right corners rounded */
-}
-
-.more {
-    width: 100%;
-}
-
-.dropdown-content {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%; /* Position dropdown below the button */
-    left: 0;
-    background-color: var(--light-black);
-    /* border-radius: 30px; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    overflow: hidden;
-    width: 100%; /* Match the parent button width */
-    border: none;
-}
-
-.dropdown-content .filter-btn {
-    padding: 10px 20px;
-    width: 100%; /* Full width */
-    border-radius: 0; /* No rounded corners inside */
-}
-
-.dropdown-content .filter-btn:first-child {
-    border-radius: 30px 30px 0 0; /* Round top corners */
-}
-
-.dropdown-content .filter-btn:last-child {
-    border-radius: 0 0 30px 30px; /* Round bottom corners */
-}
-
-.filter-dropdown .dropdown-content.show {
-    display: block; /* Show dropdown when active */
-}
-
-.post {
-    background-color: var(--light-black);
+  }
+  
+  .filter-btn.active {
+    background-color: #90ee90;
+    color: #121212;
+  }
+  
+  .post {
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
-}
-
-.profile {
+  }
+  
+  .profile {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-}
-
-.profile img {
+  }
+  
+  .profile img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
     margin-right: 10px;
-}
-
-.profile-info h3 {
+  }
+  
+  .profile-info h3 {
     margin: 0;
     font-size: 18px;
-    color: whitesmoke;
-}
-
-.profile-info p {
+  }
+  
+  .profile-info p {
     margin: 0;
     font-size: 14px;
     color: #ccc;
-}
-
-.badge {
-    color: #ccc;
+  }
+  
+  .badge {
+    background-color: #90ee90;
+    color: #121212;
     padding: 5px 10px;
     border-radius: 5px;
     margin-left: auto;
-}
-
-.badge2 {
-    color: whitesmoke;
-    background-color: var(--light-green);
-    padding: 5px 10px;
-    border-radius: 30px;
-    margin-left: auto;
-}
-
-
-.post-text {
+  }
+  
+  .post-text {
     margin-bottom: 15px;
     line-height: 1.6;
-    color: whitesmoke;
-}
-
-.post-footer {
+  }
+  
+  .post-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
     color: #ccc;
-}
+  }
+  
+  .actions button {
+    background-color: #292929;
+    border: none;
+    color: #90ee90;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #90ee90;
+    color: #121212;
+  }
 
 /*media queries*/
 .grid-container {
@@ -540,7 +443,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 904px) {
     .grid-container {
         grid-template-columns: repeat(2, 2fr);
     }
@@ -549,20 +452,5 @@ footer {
 @media (max-width: 645px) {
     .grid-container {
         grid-template-columns: repeat(1, 4fr);
-    }
-}
-
-@media (max-width: 1300px) {
-    .container {
-        flex-direction: column; /* Stacks elements vertically */
-    }
-
-    .sidebar {
-        width: 100%; /* Sidebar takes full width */
-        margin-bottom: 20px; /* Adds spacing below the sidebar */
-    }
-
-    .post-content {
-        width: 100%; /* Post content also takes full width */
     }
 }

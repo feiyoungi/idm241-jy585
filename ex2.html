@@ -4,23 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDM241 Final Build</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="ex2.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-<header>
-    <div class="header">
-        <img src="assets/logo.png" alt="personality database logo">
-        <h1>IDM241 Final  Build</h1>
-        <h2>Microinteractions for <a href="https://www.personality-database.com/en-US/profile/8817/kou-mabuchi-ao-haru-ride-mbti-personality-type" target="_blank">Personality Database</a></h2>
-    </div>
-</header>
+    <header>
+        <div class="header">
+            <img src="assets/logo.png" alt="personality database logo">
+            <h1>IDM241 Final  Build</h1>
+            <h2>Microinteractions for <a href="https://www.personality-database.com/en-US/profile/8817/kou-mabuchi-ao-haru-ride-mbti-personality-type" target="_blank">Personality Database</a></h2>
+        </div>
+    </header>
 
-<div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="microinteraction">
+                <button class="collapsible">Select Personalities<span class="wide-chevron"></span></button>
+                <input type="text" class="personality-input" placeholder="Or type directly..." style="display: none;">
+                <div class="content">
+                    <p>Four Letter <span class="wide-caret"></span></p>
+                    <br>
+                        <button class="personality-button">ISTJ</button>
+                        <button class="personality-button">ESTJ</button>
+                        <button class="personality-button">ISFJ</button>
+                        <button class="personality-button">ESFJ</button>
+                        <button class="personality-button">ISFP</button>
+                        <button class="personality-button">ESFP</button>
+                        <button class="personality-button">ISTP</button>
+                        <button class="personality-button">ESTP</button>
+                        <button class="personality-button">INFJ</button>
+                        <button class="personality-button">ENFJ</button>
+                        <button class="personality-button">INFP</button>
+                        <button class="personality-button">ENFP</button>
+                        <button class="personality-button">INTP</button>
+                        <button class="personality-button">ENTP</button>
+                        <button class="personality-button">INTJ</button>
+                        <button class="personality-button">ENTJ</button>
+                    <div class="more-drop-downs">
+                        <p>Enneagram <span class="wide-chevron"></p>
+                        <p>Socionics <span class="wide-chevron"></p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#">Celebrities</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Concepts</a></li>
+            </ul>
+        </div>
+    
+        <!-- Post Content -->
+        <div class="post-content">
+          <div class="filters">
+            <button class="filter-btn active">New</button>
+            <button class="filter-btn">Best</button>
+            <button class="filter-btn">Top</button>
+            <button class="filter-btn">More</button>
+          </div>
+          
+          <div class="post">
+            <div class="profile">
+              <img src="profile-pic.jpg" alt="Profile Picture">
+              <div class="profile-info">
+                <h3>Twiligh.🍉</h3>
+                <p>INFP 4w5 • Cardinal</p>
+              </div>
+              <span class="badge">INFP</span>
+            </div>
+            <p class="post-text">
+              He is INFP depressed as a result of his exposure to successive shocks, his parents' divorce, then his mother's illness and then her death, which he was unable to completely overcome.
+              His attempt to stay away from everyone and act so cold was a kind of self-punishment, especially since he wanted the opposite. He simply saw that he did not deserve to be happy.
+            </p>
+            <div class="post-footer">
+              <p>Last edit: 2 weeks ago</p>
+              <div class="actions">
+                <button>👍 1</button>
+                <button>👎</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<div class="two-microinteractions">
+    <div class="microinteraction">
         <button class="collapsible">Select Personalities<span class="wide-chevron"></span></button>
         <input type="text" class="personality-input" placeholder="Or type directly..." style="display: none;">
         <div class="content">
@@ -47,98 +123,27 @@
                 <p>Socionics <span class="wide-chevron"></p>
             </div>
         </div>
-        <!-- <button class="extra-buttons">Celebrities</button>
-        <button class="extra-buttons">Characters</button>
-        <button class="extra-buttons">Concepts</button> -->
     </div>
-    
-    <!-- Post Content -->
-     
-    <div class="post-content">
-        <div class="filters">
-            <button class="filter-btn">New</button>
-            <button class="filter-btn no-hover">Best</button>
-            <button class="filter-btn no-hover">Top</button>                
-            <div class="filter-dropdown">
-                <!-- <button class="filter-btn more-btn">More<span class="wide-chevron"></span></button> -->
-                <div class="more">
-                    <button class="filter-btn more-btn">More</button>
-                    <div class="dropdown-content">
-                        <button class="filter-btn2">Old</button>
-                        <button class="filter-btn3">Debate</button>
-                        <button class="filter-btn4">Mine</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="post">
-            <div class="profile">
-                <img src="assets/pfp-min.jpeg" alt="Profile Picture">
-                <div class="profile-info">
-                    <h3>Twiligh_🍉</h3>
-                    <p>INFP 4w5 • Cardinal</p>
+    <div class="microinteraction2">
+        <div class="button-container">
+            <div class="button-cell">
+                <div class="like-section" onclick="toggleSelection('like')">
+                    <span id="like-count">0</span>
+                    <span class="material-icons like-icon">thumb_up_off_alt</span>
                 </div>
-                <span class="badge">• • •</span>
-            </div>
-            <span class="badge2">INFP</span>
-            <p class="post-text">As a person who has seen all comic books and animations more than 10 times, I'm sure about it, he is a Fi-dom and E5 at the same time. However, I think he is unhealthy sx5.
-            </p>
-            <div class="post-footer">
-                <p>Last edit: 2 weeks ago</p>
-                <div class="button-container">
-                <div class="button-cell">
-                    <div class="like-section" onclick="toggleSelection('like')">
-                        <span id="like-count">0</span>
-                        <span class="material-icons like-icon">thumb_up_off_alt</span>
+                <div class="separator"></div>
+                <div class="dislike-section" onclick="toggleSelection('dislike')">
+                    <div class="icons">
+                        <span class="material-icons dislike-icon">thumb_down_off_alt</span>    
                     </div>
-                    <div class="separator"></div>
-                    <div class="dislike-section" onclick="toggleSelection('dislike')">
-                        <div class="icons">
-                            <span class="material-icons dislike-icon">thumb_down_off_alt</span>    
-                        </div>
-                        <div class="dislike-number">
-                            <span id="dislike-count">0</span>
-                        </div>
+                    <div class="dislike-number">
+                        <span id="dislike-count">0</span>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
-        <br>
-        <div class="post">
-            <div class="profile">
-                <img src="assets/pic2.png" alt="Profile Picture">
-                <div class="profile-info">
-                    <h3>Inas</h3>
-                    <p>XXXX • Baron</p>
-                </div>
-                <span class="badge">• • •</span>
-            </div>
-            <span class="badge2">ISFP - IF(S) - SP4 - 4w5 - 496 - ESI - EVFL</span>
-            <p class="post-text">Sp4 who’s mistyped as an e5.</p>
-            <div class="post-footer">
-                <p>Last edit: 3 months ago</p>
-                <div class="button-container">
-                <div class="button-cell">
-                    <div class="like-section" onclick="toggleSelection('like')">
-                        <span id="like-count">0</span>
-                        <span class="material-icons like-icon">thumb_up_off_alt</span>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="dislike-section" onclick="toggleSelection('dislike')">
-                        <div class="icons">
-                            <span class="material-icons dislike-icon">thumb_down_off_alt</span>    
-                        </div>
-                        <div class="dislike-number">
-                            <span id="dislike-count">0</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
+    </div>  
 </div>
 
 <div class="title-section">
@@ -268,58 +273,51 @@
                 </ul>
     </div>
 </div>
-<!-- -----------------------------------------------------------------  -->
+
 <div class="title-section">
-    <h2>New Button (2)</h2>
+    <h2>Like Button (2) and Dislike Button (3)</h2>
 </div>
 
 <div class="grid-container">
     <div class="content-box">
         <h3>TRIGGERS</h3>
-            <p><strong>New Button - Default</strong></p>
+            <p><strong>Like/Dislike Button - Default</strong></p>
                 <ul>
                     <li>Hover ON</li>
                     <li>Hover OFF</li>
                     <li>Click ON</li>
-                        <ul>
-                            <li>Space Inside of the New Button</li>
-                        </ul>
                 </ul>
-            <p><strong>New Button - Active</strong></p>
+            <p><strong>Like/Dislike Button - Active</strong></p>
                 <ul>
                     <li>Hover ON</li>
                     <li>Hover OFF</li>
                     <li>Click ON</li>
-                        <ul>
-                            <li>Space Inside of the New Button</li>
-                            <li>Space Outside of the New Button: More Buttons</li>
-                        </ul>
                 </ul>
     </div>
 
     <div class="content-box">
         <h3>RULES</h3>
-            <p><strong>New Button - Default</strong></p>
+            <p><strong>Like/Dislike Button - Default</strong></p>
                 <ul>
                     <li>Hover ON</li>
                         <ul>
                             <li>Cursor changes to finger</li>
-                            <li>Button color fades into a green with 30% opacity at 0.6s</li>
-                            <li>Text color fades into white at 0.6s</li>
+                            <li>Color of button outline changes to green and fades in at 0.6s</li>
                         </ul>
                     <li>Hover OFF</li>
                         <ul>
-                            <li>Finger changes to cursor</li>
-                            <li>Button color fades into gray at 0.6s</li>
-                            <li>Text color fades into gray at 0.6s</li>
+                            <li>Cursor changes to pointer</li>
+                            <li>Color of button outline changes back to gray and fades in at 0.6s</li>
                         </ul>
-                    <li>Click ON (Space Inside of the New Button)</li>
+                    <li>Click ON</li>
                         <ul>
-                            <li>Button color fades into a green with 100% opacity at 0.6s</li>
-                            <li>Text color fades into white at 0.6s</li>
+                            <li>Like/dislike icon fills in with green, scales 5% larger, then 5% smaller at 0.6s </li>
+                            <li>Number of likes/dislikes changes to 1 value more</li>
+                            <li>Database sets like/dislike number to increase by n+1</li>
+                            <li>Database sets like/dislike to “true”, the unselected one of the pair will be set to “false”</li>
                         </ul>
                 </ul>
-            <p><strong>New Button - Active</strong></p>
+            <p><strong>Like/Dislike Button - Active</strong></p>
                 <ul>
                     <li>Hover ON</li>
                         <ul>
@@ -327,43 +325,39 @@
                         </ul>
                     <li>Hover OFF</li>
                         <ul>
-                            <li>Finger changes to cursor</li>
+                            <li>Cursor changes to pointer</li>
                         </ul>
-                    <li>Click ON (Space Inside of the New Button)</li>
+                    <li>Click ON</li>
                         <ul>
-                            <li>NONE</li>
-                        </ul>
-                    <li>Click ON (Space Outside of the New Button: More Button)</li>
-                        <ul>
-                            <li>Button color fades into gray at 0.6s</li>
-                            <li>Text color fades into gray at 0.6s</li>
+                            <li>Like/dislike icon scales 5% larger, then 5% smaller, green color fades away, and gray outline fades in and returns at 0.6s</li>
+                            <li>Number of likes/dislikes changes to 1 value less</li>
+                            <li>Database sets like/dislike number to decrease by n-1</li>
+                            <li>Database sets like/dislike to “false”</li>
                         </ul>
                 </ul>
     </div>
 
     <div class="content-box">
         <h3>FEEDBACK</h3>
-        <p><strong>New Button - Default</strong></p>
+    <p><strong>Like/Dislike Button - Default</strong></p>
         <ul>
             <li>Hover ON</li>
                 <ul>
                     <li>Cursor changes to finger</li>
-                    <li>Button color fades into a green with 30% opacity at 0.6s</li>
-                    <li>Text color fades into white at 0.6s</li>
+                    <li>Color of button outline changes to green and fades in at 0.6s</li>
                 </ul>
             <li>Hover OFF</li>
                 <ul>
-                    <li>Finger changes to cursor</li>
-                    <li>Button color fades into gray at 0.6s</li>
-                    <li>Text color fades into gray at 0.6s</li>
+                    <li>Cursor changes to pointer</li>
+                    <li>Color of button outline changes back to gray and fades in at 0.6s</li>
                 </ul>
-            <li>Click ON (Space Inside of the New Button)</li>
+            <li>Click ON</li>
                 <ul>
-                    <li>Button color fades into a green with 100% opacity at 0.6s</li>
-                    <li>Text color fades into white at 0.6s</li>
+                    <li>Like/dislike icon fills in with green, scales 5% larger, then 5% smaller at 0.6s </li>
+                    <li>Number of likes/dislikes changes to 1 value more</li>
                 </ul>
         </ul>
-    <p><strong>New Button - Active</strong></p>
+    <p><strong>Like/Dislike Button - Active</strong></p>
         <ul>
             <li>Hover ON</li>
                 <ul>
@@ -371,16 +365,12 @@
                 </ul>
             <li>Hover OFF</li>
                 <ul>
-                    <li>Finger changes to cursor</li>
+                    <li>Cursor changes to pointer</li>
                 </ul>
-            <li>Click ON (Space Inside of the New Button)</li>
+            <li>Click ON</li>
                 <ul>
-                    <li>NONE</li>
-                </ul>
-            <li>Click ON (Space Outside of the New Button: More Button)</li>
-                <ul>
-                    <li>Button color fades into gray at 0.6s</li>
-                    <li>Text color fades into gray at 0.6s</li>
+                    <li>Like/dislike icon scales 5% larger, then 5% smaller, green color fades away, and gray outline fades in and returns at 0.6s</li>
+                    <li>Number of likes/dislikes changes to 1 value less</li>
                 </ul>
         </ul>
     </div>
@@ -397,9 +387,9 @@
                 </ul>
     </div>
 </div>
-<!-- -----------------------------------------------------------------  -->
+
 <div class="title-section">
-    <h2>More Button (3)</h2>
+    <h2>More Button (4)</h2>
 </div>
 
 <div class="grid-container">
@@ -514,51 +504,32 @@
                 </ul>
     </div>
 </div>
-<!-- -----------------------------------------------------------------  -->
+
+
 <div class="title-section">
-    <h2>Like Button (4) and Dislike Button (5)</h2>
+    <h2>New Button (5)</h2>
 </div>
 
 <div class="grid-container">
     <div class="content-box">
         <h3>TRIGGERS</h3>
-            <p><strong>Like/Dislike Button - Default</strong></p>
+            <p><strong>New Button - Default/Active</strong></p>
+                <p><em>The default and active states are the same.</em></p>
                 <ul>
                     <li>Hover ON</li>
                     <li>Hover OFF</li>
                     <li>Click ON</li>
-                </ul>
-            <p><strong>Like/Dislike Button - Active</strong></p>
-                <ul>
-                    <li>Hover ON</li>
-                    <li>Hover OFF</li>
-                    <li>Click ON</li>
+                        <ul>
+                            <li>Space Inside of New Button</li>
+                            <li>More Button</li>
+                        </ul>
                 </ul>
     </div>
 
     <div class="content-box">
         <h3>RULES</h3>
-            <p><strong>Like/Dislike Button - Default</strong></p>
-                <ul>
-                    <li>Hover ON</li>
-                        <ul>
-                            <li>Cursor changes to finger</li>
-                            <li>Color of button outline changes to green and fades in at 0.6s</li>
-                        </ul>
-                    <li>Hover OFF</li>
-                        <ul>
-                            <li>Cursor changes to pointer</li>
-                            <li>Color of button outline changes back to gray and fades in at 0.6s</li>
-                        </ul>
-                    <li>Click ON</li>
-                        <ul>
-                            <li>Like/dislike icon fills in with green, scales 5% larger, then 5% smaller at 0.6s </li>
-                            <li>Number of likes/dislikes changes to 1 value more</li>
-                            <li>Database sets like/dislike number to increase by n+1</li>
-                            <li>Database sets like/dislike to “true”, the unselected one of the pair will be set to “false”</li>
-                        </ul>
-                </ul>
-            <p><strong>Like/Dislike Button - Active</strong></p>
+            <p><strong>New Button - Default/Active</strong></p>
+                <p><em>The default and active states are the same.</em></p>
                 <ul>
                     <li>Hover ON</li>
                         <ul>
@@ -566,39 +537,24 @@
                         </ul>
                     <li>Hover OFF</li>
                         <ul>
-                            <li>Cursor changes to pointer</li>
+                            <li>Finger changes to cursor</li>
                         </ul>
-                    <li>Click ON</li>
+                    <li>Click ON (Space Inside of New Button)</li>
                         <ul>
-                            <li>Like/dislike icon scales 5% larger, then 5% smaller, green color fades away, and gray outline fades in and returns at 0.6s</li>
-                            <li>Number of likes/dislikes changes to 1 value less</li>
-                            <li>Database sets like/dislike number to decrease by n-1</li>
-                            <li>Database sets like/dislike to “false”</li>
+                            <li>NONE; nothing occurs as its active state is also its default state</li>
+                        </ul>
+                    <li>Click ON (More Button)</li>
+                        <ul>
+                            <li>Button color fades back into a gray at 0.6s</li>
+                            <li>Text color changes from white to gray at 0.6s</li>
                         </ul>
                 </ul>
     </div>
 
     <div class="content-box">
         <h3>FEEDBACK</h3>
-    <p><strong>Like/Dislike Button - Default</strong></p>
-        <ul>
-            <li>Hover ON</li>
-                <ul>
-                    <li>Cursor changes to finger</li>
-                    <li>Color of button outline changes to green and fades in at 0.6s</li>
-                </ul>
-            <li>Hover OFF</li>
-                <ul>
-                    <li>Cursor changes to pointer</li>
-                    <li>Color of button outline changes back to gray and fades in at 0.6s</li>
-                </ul>
-            <li>Click ON</li>
-                <ul>
-                    <li>Like/dislike icon fills in with green, scales 5% larger, then 5% smaller at 0.6s </li>
-                    <li>Number of likes/dislikes changes to 1 value more</li>
-                </ul>
-        </ul>
-    <p><strong>Like/Dislike Button - Active</strong></p>
+    <p><strong>New Button - Default/Active</strong></p>
+        <p><em>The default and active states are the same.</em></p>
         <ul>
             <li>Hover ON</li>
                 <ul>
@@ -606,12 +562,16 @@
                 </ul>
             <li>Hover OFF</li>
                 <ul>
-                    <li>Cursor changes to pointer</li>
+                    <li>Finger changes to cursor</li>
                 </ul>
-            <li>Click ON</li>
+            <li>Click ON (Space Inside of New Button)</li>
                 <ul>
-                    <li>Like/dislike icon scales 5% larger, then 5% smaller, green color fades away, and gray outline fades in and returns at 0.6s</li>
-                    <li>Number of likes/dislikes changes to 1 value less</li>
+                    <li>NONE; nothing occurs as its active state is also its default state</li>
+                </ul>
+            <li>Click ON (More Button)</li>
+                <ul>
+                    <li>Button color fades back into a gray at 0.6s</li>
+                    <li>Text color changes from white to gray at 0.6s</li>
                 </ul>
         </ul>
     </div>
