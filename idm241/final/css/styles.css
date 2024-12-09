@@ -230,7 +230,7 @@ button.personality-button {
 /*more drop downs*/ 
 .more-drop-downs {
     display: block; /* it still follows the grid */
-    width: 100%;
+    /* width: 100%; */
     margin:0px; 
     color: whitesmoke; 
     padding: 10px; 
@@ -319,13 +319,19 @@ footer {
 
 /*Final Build*/ 
 .container {
+    /* display: flex;
+    height: 100vh; */
+
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap; /* Allow children to wrap on small screens */
+    min-height: 100vh; /* Ensure it occupies at least the viewport height */
+    height: auto; /* Remove fixed height */
 }
 
 /* Sidebar */
 .sidebar {
-    width: 20%; /* change, used to be 25% */
+    width: 22%; /* change, used to be 25% */
+    overflow: auto;
 }
 
 /* Sidebar Extra Buttons */ 
@@ -345,8 +351,9 @@ footer {
 }
 /* Content */
 .post-content {
-    width: 80%;/*change, used to be 75% */
+    width: 78%;/*change, used to be 75% */
     padding: 20px;
+    overflow: auto;
 }
 
 .filters {
@@ -364,7 +371,7 @@ footer {
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.6s ease, box-shadow 0.6s ease;
-    width: 125px;
+    width: 300px;
     font-size: 15px;
 }
 
@@ -402,7 +409,7 @@ footer {
 .filter-btn.more-btn {
     border-radius: 30px; /* Default rounded corners */
     transition: border-radius 0.3s ease; /* Smooth transition */
-    width: 125px;
+    width: 300px;
 }
 
 .filter-btn.more-btn.active {
@@ -414,7 +421,7 @@ footer {
     border: none;
     color: #959595;
     padding: 10px 20px;
-    width: 125px;
+    width: 300px;
     font-size: 15px;
 }
 
@@ -423,7 +430,7 @@ footer {
     border: none;
     color: #959595;
     padding: 10px 20px;
-    width: 125px;
+    width: 300px;
     font-size: 15px;
 }
 
@@ -432,13 +439,13 @@ footer {
     border: none;
     color: #959595;
     padding: 10px 20px;
-    width: 125px;
+    width: 300px;
     font-size: 15px;
     border-radius: 0 0 30px 30px; /* Bottom-left and bottom-right corners rounded */
 }
 
 .more {
-    width: 100%;
+    width: auto;
 }
 
 .dropdown-content {
@@ -566,3 +573,4 @@ footer {
         width: 100%; /* Post content also takes full width */
     }
 }
+

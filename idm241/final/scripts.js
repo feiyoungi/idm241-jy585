@@ -42,14 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Like and Dislike Button Logic
     let selected = null;
 
-    function toggleLikeDislike(type) {
-        const likeSection = document.querySelector('.like-section');
-        const dislikeSection = document.querySelector('.dislike-section');
-        const likeCount = document.getElementById('like-count');
-        const dislikeCount = document.getElementById('dislike-count');
-        const likeIcon = likeSection.querySelector('.material-icons');
-        const dislikeIcon = dislikeSection.querySelector('.material-icons');
-
+    function toggleLikeDislike(type, likeSection, dislikeSection, likeCount, dislikeCount, likeIcon, dislikeIcon) {
         if (type === 'like') {
             if (selected === 'like') {
                 selected = null;
@@ -91,13 +84,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    const likeButton = document.querySelector('.like-section');
-    const dislikeButton = document.querySelector('.dislike-section');
+    // Disable Like/Dislike functionality for the second post
+    const posts = document.querySelectorAll('.post');
 
-    if (likeButton && dislikeButton) {
-        likeButton.addEventListener('click', () => toggleLikeDislike('like'));
-        dislikeButton.addEventListener('click', () => toggleLikeDislike('dislike'));
-    }
+    posts.forEach((post, index) => {
+        const likeSection = post.querySelector('.like-section');
+        const dislikeSection = post.querySelector('.dislike-section');
+        const likeCount = post.querySelector('#like-count');
+        const dislikeCount = post.querySelector('#dislike-count');
+        const likeIcon = likeSection.querySelector('.material-icons');
+        const dislikeIcon = dislikeSection.querySelector('.material-icons');
+
+        if (index === 1) {
+            // Second post (index 1) - Disable like/dislike buttons
+            likeSection.style.pointerEvents = 'none';
+            dislikeSection.style.pointerEvents = 'none';
+            return;
+        }
+
+        likeSection.addEventListener('click', () => toggleLikeDislike('like', likeSection, dislikeSection, likeCount, dislikeCount, likeIcon, dislikeIcon));
+        dislikeSection.addEventListener('click', () => toggleLikeDislike('dislike', likeSection, dislikeSection, likeCount, dislikeCount, likeIcon, dislikeIcon));
+    });
 
     // Filter Buttons Logic
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -133,5 +140,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-
