@@ -296,6 +296,8 @@ footer {
 /* Filters */
 .filters {
     display: flex;
+    max-width: fit-content;
+    justify-content: center;
     margin-bottom: 20px;
     background-color: var(--light-black);
     border-radius: 30px;
@@ -519,8 +521,108 @@ footer {
     .collapsible {  
         margin: auto;
         margin-top: 20px;
+    }
 }
 
+@media (max-width: 1000px) {
+    .filter-btn {
+        width: 250px;
+    }
+
+    .filter-btn.more-btn {
+        width: 250px;
+    }
+
+    .filter-btn2 {
+        width: 250px;
+    }
+
+    .filters {
+        display: flex;
+        max-width: fit-content;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 760px) {
+    .filter-btn {
+        width: 200px;
+    }
+
+    .filter-btn.more-btn {
+        width: 200px;
+    }
+
+    .filter-btn2 {
+        width: 200px;
+    }
+
+    .filters {
+        display: flex;
+        max-width: fit-content;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .filter-btn {
+        width: 150px;
+    }
+
+    .filter-btn.more-btn {
+        width: 150px;
+    }
+
+    .filter-btn2 {
+        width: 150px;
+    }
+
+    .filters {
+        display: flex;
+        max-width: fit-content;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .filter-btn {
+        width: 120px;
+    }
+
+    .filter-btn.more-btn {
+        width: 120px;
+    }
+
+    .filter-btn2 {
+        width: 120px;
+    }
+
+    .filters {
+        display: flex;
+        max-width: fit-content;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 394px) {
+    .filter-btn {
+        width: 100px;
+    }
+
+    .filter-btn.more-btn {
+        width: 100px;
+    }
+
+    .filter-btn2 {
+        width: 100px;
+    }
+
+    .filters {
+        display: flex;
+        max-width: fit-content;
+        justify-content: center;
+    }
+}
 
 
 
