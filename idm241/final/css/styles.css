@@ -50,6 +50,9 @@ nav a {
 .title-section {
     padding: 20px;
 }
+.title-section1 {
+    padding: 40px 20px 20px 20px;
+}
 
 /*general body*/
 body {
@@ -72,36 +75,27 @@ p {
     color: var(--light-green);
     cursor: pointer;
     padding: 10px 49px;
-    /* width: 252px; change */
-    width: 100%; /* change */
-    max-width: 252px;/* change */
+    width: 100%; 
+    max-width: 252px;
     border: 2.5px solid var(--dark-green);
     text-align: center;
     align-items: center;
     outline: none;
     font-size: 15px;
     border-radius: 30px;
-    /* margin: 20px 20px 0px 0px;  */
-    /* margin: 20px 0px; */
-    margin: 20px;
+    margin: 20px 20px 0px 20px;
     display: block;
     transition: border-radius 3s ease;
     transition: transform 0.6s ease; 
 }
-
-/* .active, .collapsible:hover {
-    background-color: var(--dark-black);
-    border: 2.5px solid var(--light-green);
-} */
 
 .collapsible.active {
     border-radius: 30px 30px 0 0; /* round top corners only when active */
 }
 
 .collapsible:hover {
-    background-color: var(--dark-black);
     border: 2.5px solid var(--light-green);
-    transform: scale(1.05); /* Adjust scale to control hover size */
+    transform: scale(1.05); 
 }
 
 /*caret and chevron*/
@@ -156,10 +150,6 @@ p {
     font-size: 14px;
 }
 
-.content p:hover {
-    color: var(--light-green);
-}
-
 /*context box*/ 
 .content-box {
     padding:25px;
@@ -168,16 +158,6 @@ p {
     background-color: var(--light-black);
     margin: 20px;
     border-radius: 15px;
-}
-
-.content-box nav {
-    padding:25px;
-    border: 2px;
-    border-color: var(--light-black);
-    background-color: var(--light-black);
-    margin: 20px;
-    border-radius: 15px;
-    font-size: 25px;
 }
 
 /*personality input*/ 
@@ -191,7 +171,7 @@ p {
     margin-right: 20px;
     width: 252px;
     border: 2px solid var(--light-green);  
-    border-bottom-color: var(--gray); /* border bottom none to  remove the bottom border */
+    border-bottom-color: var(--gray); 
     border-radius: 30px; /* initially fully rounded */
     font-size: 15px;
     outline: none;
@@ -205,7 +185,6 @@ p {
 
 .personality-input:focus {
     border-color: var(--light-green);
-    /* background-color: var(--light-black); change background on focus */
 }
 
 /*personality buttons */
@@ -222,29 +201,14 @@ button.personality-button {
     outline: none;
 }
 
-/* button.personality-button:hover {
-    background-color: var(--dark-green);
-    color: white;
-} */
-
 /*more drop downs*/ 
 .more-drop-downs {
-    display: block; /* it still follows the grid */
-    /* width: 100%; */
+    display: block;
     margin:0px; 
     color: whitesmoke; 
     padding: 10px; 
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
-}
-
-/*microinteraction*/
-.microinteraction {
-    display: flex; 
-    flex-direction: column; /* stack items vertically */
-    justify-content: center; /* center items horizontally */
-    align-items: center; /* center items vertically */
-    /* margin: 0px auto 10px auto; */
 }
 
 /*like and dislike button*/ 
@@ -292,13 +256,11 @@ button.personality-button {
 .like-section.active .material-icons,
 .dislike-section.active .material-icons {
     color: var(--light-green);
-    /* opacity: 1; */
 }
 
 #like-count, #dislike-count {
     color: #8C8C8C; 
 }
-
 
 /*footer*/
 footer {
@@ -308,20 +270,10 @@ footer {
     margin: 20px 0px 0px 0px;
 }
 
-/*video*/ 
-/* video { 
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
-    max-width: 80%;
-} */
-
 /*Final Build*/ 
 .container {
     /* display: flex;
     height: 100vh; */
-
     display: flex;
     flex-wrap: wrap; /* Allow children to wrap on small screens */
     min-height: 100vh; /* Ensure it occupies at least the viewport height */
@@ -330,32 +282,18 @@ footer {
 
 /* Sidebar */
 .sidebar {
-    width: 22%; /* change, used to be 25% */
+    width: 22%;
     overflow: auto;
 }
 
-/* Sidebar Extra Buttons */ 
-.extra-buttons {
-    background-color: var(--dark-black);
-    color: var(--light-green);
-    padding: 10px 49px;
-    width: 252px;
-    border: 2.5px solid var(--dark-green);
-    text-align: center;
-    align-items: center;
-    font-size: 15px;
-    border-radius: 30px;
-    /* margin: 10px 20px; */
-    /* margin: 20px 20px 0px 0px;  */
-    margin: 20px auto 0px auto;
-}
 /* Content */
 .post-content {
-    width: 78%;/*change, used to be 75% */
+    width: 78%;
     padding: 20px;
     overflow: auto;
 }
 
+/* Filters */
 .filters {
     display: flex;
     margin-bottom: 20px;
@@ -425,28 +363,28 @@ footer {
     font-size: 15px;
 }
 
-.filter-btn3 {
+/* .filter-btn3 {
     background-color: #225941;
     border: none;
     color: #959595;
     padding: 10px 20px;
     width: 300px;
     font-size: 15px;
-}
+} */
 
-.filter-btn4 {
+/* .filter-btn4 {
     background-color: #225941;
     border: none;
     color: #959595;
     padding: 10px 20px;
     width: 300px;
     font-size: 15px;
-    border-radius: 0 0 30px 30px; /* Bottom-left and bottom-right corners rounded */
-}
+    border-radius: 0 0 30px 30px; 
+} */
 
-.more {
+/* .more {
     width: auto;
-}
+} */
 
 .dropdown-content {
     display: none; /* Initially hidden */
@@ -460,6 +398,7 @@ footer {
     overflow: hidden;
     width: 100%; /* Match the parent button width */
     border: none;
+    border-radius: 0 0 30px 30px; /* Bottom-left and bottom-right corners */
 }
 
 .dropdown-content .filter-btn {
@@ -566,11 +505,22 @@ footer {
 
     .sidebar {
         width: 100%; /* Sidebar takes full width */
-        margin-bottom: 20px; /* Adds spacing below the sidebar */
+        /* margin-bottom: 20px; */
+        padding: 0px;
+        margin: 0px;
+        /* height: 80px;  */
     }
 
     .post-content {
         width: 100%; /* Post content also takes full width */
+        padding-top: 0px;
     }
+
+    .collapsible {  
+        margin: auto;
+        margin-top: 20px;
 }
+
+
+
 
