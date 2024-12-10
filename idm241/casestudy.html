@@ -8,20 +8,62 @@
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <img src="assets/logo.png" alt="personality database logo">
-            <h1>A Microinteractions Project</h1>
-            <h2>Redesigning <a href="https://www.personality-database.com/en-US/profile/8817/kou-mabuchi-ao-haru-ride-mbti-personality-type" target="_blank">Personality Database's</a> Character Profile Page</h2>
-            <h3>HTML, CSS, and JavaScript</h3>
+    <div class="hero">
+        <img src="assets/hero.jpg" alt="personality database hero image">
+    </div>
+
+    <div class="casestudy">
+        <h1>A Microinteractions Project</h1>
+        <h2>Redesigning <a href="https://www.personality-database.com/en-US/profile/8817/kou-mabuchi-ao-haru-ride-mbti-personality-type" target="_blank">Personality Database's</a> Character Profile Page with HTML, CSS, and JavaScript</h2>
+
+        <div class="info">
+            <h2>Overview</h2>
+                <p>Microinteractions are essential in UX design, providing feedback, enhancing user experience, and improving usability. In this project, I refined an existing set of microinteractions using HTML, CSS, and JavaScript. Specifically, I reimagined and redesigned the Personality Database Character Profile Page, enhancing the functionality and user experience.</p>
+            <h2>Context and Challenge</h2>
+                <h3>Background</h3>
+                    <p>Personality Database (PDB) is a community-driven platform where users explore and discuss personality types through frameworks such as MBTI, Enneagram, and Socionics. It enables users to assign and debate personality types for real-life figures and fictional characters, fostering engaging discussions and deeper insights into personality systems. Despite its wealth of information and active community, there are areas where the user experience could be improved.</p>
+                <h3>Timeline</h3>
+                    <img src="assets/timeline-min.jpg" alt="timeline for project">
+                    <p>Over the course of 10 weeks, I undertook the challenge of independently reimagining and developing improved microinteractions. Using HTML, CSS, and JavaScript, I built a functional prototype that seamlessly integrated with PDB's branding. Each interaction was thoughtfully designed to enhance usability and provide visually engaging feedback. Through an iterative process that included 3 design and testing phases: Alpha, Beta, and Final, I delivered a refined final product, complete with detailed documentation outlining the interaction mechanics.</p>
+                <h3>Problems</h3>
+                    <p>The goal was to enhance existing microinteractions while thoroughly documenting their triggers, rules, feedback, loops, and modes. These interactions were to be integrated into a responsive page with a clear and user-friendly layout. I chose to focus on PDB’s character profile page, as it offered several areas for improvement. The original page had significant issues with both functionality and aesthetics, which I aimed to resolve. The five interactions I focused on improving were:</p>
+                        <ul>
+                            <li><strong>Select Personalities Dropdown Button  (1):</strong> Instant and jarring transition animation.</li>
+                            <li><strong>New Button (2):</strong> No clear distinction between the hover and active states, along with sudden and harsh transition animations.</li>
+                            <li><strong>More Button (3):</strong> Disconnected dropdown menu and abrupt, jarring transition animation.</li>
+                            <li><strong>Like (4)/Dislike Button (5):</strong> Lack of hover states and abrupt, jarring transition animation.</li>
+                        </ul>
+                <h3>Goals and Objectives</h3>
+                    <p>My primary goal was to address the abrupt and jarring animations and transition states for each interaction, ensuring a smoother and more seamless experience. I also aimed to provide clear feedback for the user when hovering or clicking on elements through the use of color, cursor changes, and sizing. Additionally, I focused on creating a design that aligned with PDB’s branding, ensuring the color scheme and fonts were consistent with the site’s aesthetic.</p>
+            <h2>Process and Insight</h2>
+                <h3>Alpha</h3>
+                    <a href="https://feiyoungi.netlify.app/idm241/alpha/build" target="_blank">Link to Alpha Build</a>
+                        <p>In the Alpha stage, I focused on improving the ‘Select Personalities’ dropdown button. I enhanced the hover state by making it more dynamic to grab the user’s attention. The original interaction only involved a color change to the button’s border, so I added a size increase during the hover state to make the interaction more noticeable. Additionally, for the transition to the active state, I implemented a smooth downward motion, addressing the jarring effect of the original instant change.</p>
+                        <img src="assets/select-default-min.jpg" alt="mockup for select personalities button">
+                        <img src="assets/select-active-min.jpg" alt="mockup for select personalities button">
+                <h3>Beta</h3>
+                    <a href="https://feiyoungi.netlify.app/idm241/beta/build" target="_blank">Link to Beta Build</a>
+                        <p>In the Beta stage, I focused on refining the ‘Like’ and ‘Dislike’ buttons for the comments. The original buttons on PDB lacked hover states, so I introduced a color change, where the thumb SVGs transition to a green color when the user hovers over the button. For the active state, I reduced the abruptness of the original transition by having the thumb outlines smoothly fade into a solid green filled-in thumb.</p>
+                        <img src="assets/like-dislike-min.jpg" alt="mockup for like/dislike button">
+                <h3>Final</h3>
+                    <a href="https://feiyoungi.netlify.app/idm241/final/build" target="_blank">Link to Final Build</a>
+                        <p>In the final stage, I focused on refining the ‘New’ and ‘More’ buttons for the comments filter, which includes two other buttons. For both buttons, I implemented a hover state where a low-opacity green appears when the user hovers over them. In the active state, the button fills with 100% opacity green. Additionally, the text includes a state indicator, fading from gray to white in both the hover and active states. For the ‘More’ button, I added extra functionality: when clicked, it triggers a CSS/JavaScript dropdown animation, addressing the abrupt transition that was present in the original design.</p>
+                        <img src="assets/new-min.jpg" alt="mockup for more button">
+                        <img src="assets/more-default-min.jpg" alt="mockup for more button">
+                        <img src="assets/more-active-min.jpg" alt="mockup for more button">
+            <h2>The Solution</h2>
+                <a href="https://feiyoungi.netlify.app/idm241/final/build" target="_blank">Link to Final Build</a>
+                <p>Through the process of ideation, iteration, and debugging, I successfully achieved my main goals: eliminating the jarring effects of instantaneous changes and providing clear visual feedback for default, hover, and active states. By incorporating color, sizing, cursors, and animations, I created a smoother, more visually appealing experience. These improvements not only enhanced the overall design but also helped guide users' attention, making the interactions more intuitive and engaging.</p>
+            <h2>The Results</h2>
+                <p>The project challenged me in several ways and provided an opportunity to refine my skills in HTML, CSS, and JavaScript. Before this, I hadn’t fully appreciated the functional importance of microinteractions. By scripting the descriptions of how each microinteraction works, I gained a deeper understanding of the nuance and coding required for something that seems small. I realized how these subtle interactions can transform a negative user experience into a positive one. For this project, I focused on improving the distinction between default, hover, and active states, while enhancing the animations to guide users through the interface in a more meaningful way.</p>
+                <button id="backToTopBtn" class="back-to-top">↑ Back to Top</button>
         </div>
-    </header>
+    </div>
 
-
-
-<footer>
-    <h3>Fei Young 2024</h3>
-</footer>
+    <footer>
+        <h3>Fei Young 2024</h3>
+    </footer>
+    <script src="final/scripts.js"></script>
 </body>
 
 </html>
